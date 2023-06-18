@@ -46,18 +46,12 @@ Example: n = 4 ==> 3, n= 0 ==> 0, n = 3 ==> 2 */
 
 function fibonacci(n) {
     // Write you logic here.
-    if (n < 2) {
-        return n;
-      }
-      let a = 0;
-      let b = 1;
-      for (let i = 2; i <= n; i++) {
-        const temp = b;
-        b = a + b;
-        a = temp;
-      }
-      return b;
+    if (n <= 1) {
+      return n;
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2);
     }
+  }
 
 
 /* Optional 
